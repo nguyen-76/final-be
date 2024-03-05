@@ -30,221 +30,218 @@
 - API endpoints
 
 - Auth APIs
-  <detail>
+  <details>
 /**
 * @route POST /auth/login
 * @description Log in with username and password
 * @body {email, passsword}
 * @access Public
 */
-  </detail>
+  </details>
 
 - Friend APIS
-  <detail>
-  /\*\*
-
+  <details>
+ /**
 * @route GET /friends/requests/incoming
 * @description Get the list of received pending requests
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+*/
+  </details>
+  <details>
+ /**
 * @route GET /friends/requests/outgoing
 * @description Get the list of sent pending requests
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+*/
+  </details>
+  <details>
+  /**
 * @route GET /friends/
 * @description Get the list of friends
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+*/
+  </details>
+  <details>
+  /**
 * @route POST /friends/requests
 * @description Send a friend request
 * @body {to : User ID}
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+*/
+  </details>
+  <details>
+  /**
 * @route PUT /friends/requests/:userId
 * @description Accept/Reject a received pending requests
 * @body {status : 'accepted' or 'declined'}
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route DELETE /friends/requests/:userId
 * @description cancel a friend request
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route DELETE /friends/:userId
 * @description remove a friend
 * @access Login required
-  \*/
-  </detail>
+  */
+  </details>
 
 - User APIs
-  <detail>
-  /\*\*
-
+  <details>
+  /**
 * @route GET /users/page=1?&limit=10
 * @description Get user with pagination
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route GET /users/me
 * @description Get current user info
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route GET /users/:id
 * @description Get user profile
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route POST /users
 * @description Register new user
 * @body {name, email, password}
 * @access Public
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route PUT /users/:id
 * @description Update user profile
 * @body {name, avatar, cover, aboutMe, city, country, company, jobtitle, fbLink, instagramLink, linkedInLink, twitterLink}
 * @access Login required
-  \*/
-  </detail>
+  */
+  </details>
 
 - Post APIs
-  <detail>
+  <details>
   /\*\*
 
 * @route GET /posts/:id/comments
 * @description Get comments of a post
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route GET /posts/:id
 * @description Get a single post
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route POST /posts
 * @description Create a new post
 * @body {content, image}
 * @access Login reuqired
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route PUT /posts/user/userId? page=1&limit=10
 * @description Get all posts a user can see with pagination
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route PUT /posts/:id
 * @description Update a post
 * @body {content, image}
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route DELETE /posts/:id
 * @description Delete a post
 * @body
 * @access Login required
-  \*/
-  </detail>
+  */
+  </details>
 
 - Comment APIs
-  <detail>
-  /\*\*
+  <details>
+  /**
 
 * @route GET /comments/:id
 * @description Get details of a comment
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route POST /comments
 * @description Create a new comment
 * @body {content, postId}
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route PUT /comment:id
 * @description Update a comment
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route DELETE comments/:id
 * @description Delete a comment
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route DELETE /comments/:id
 * @description Delete a comment
 * @body
 * @access Login required
-  \*/
-  </detail>
+  */
+  </details>
 
 - Reaction APIs
-  <detail>
-  /\*\*
-
+  <details>
+  /**
 * @route
 * @description
 * @body
 * @access Login required
-  \*/
-  </detail>
-  <detail>
-  /\*\*
+  */
+  </details>
+  <details>
+  /**
 * @route
 * @description
 * @body
 * @access Login required
-  \*/
-  </detail>
+  */
+  </details>
