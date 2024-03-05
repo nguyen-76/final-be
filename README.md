@@ -30,7 +30,7 @@
 - API endpoints
 
 - Auth APIs
-  <details>
+  - <details>
 /**
 * @route POST /auth/login
 * @description Log in with username and password
@@ -40,7 +40,7 @@
   </details>
 
 - Friend APIS
-  <details>
+  - <details>
  /**
 * @route GET /friends/requests/incoming
 * @description Get the list of received pending requests
