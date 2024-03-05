@@ -31,13 +31,12 @@
 
 - Auth APIs
   <detail>
-  /\*\*
-
+/**
 * @route POST /auth/login
 * @description Log in with username and password
 * @body {email, passsword}
 * @access Public
-  \*/
+*/
   </detail>
 
 - Friend APIS
