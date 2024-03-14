@@ -1,17 +1,15 @@
 - Background
-  - MeSpace is a social network that allows people to join by creating accounts. Each User should provide a name, an email, and a password to create an account.
-  - The email address should not link to any account in the system. After joining MySpace, users can update their profile with Avatar, Company, Job Title, Social Links, and a short description.
-  - Users can write Posts that contain text content and an image. The new posts will be shown on the user profile page, allowing other users to comment. Users can also React with like or dislike on a post or a Comment.
-  - Users can send Friend Requests to other users who have an open relationship with them. Users can accept or decline a friend request. After accepting a friend request, both become friends, and they can see posts from each other.
+  - Holostagram is a instagram similar social platform that allows people to join by creating accounts. Each User should provide a name, an email, and a password to create an account.
+  - The email address should not link to any account in the system. After joining holostagram, users can update their profile with Avatar, post picture and comment on other people picture
+  - Users can send follow request to other people. Users can accept or decline a follow request. After accepting a follow request, user can see what other people post on their timeline
 - Authentication
-  - As a user, I can see a list of other users so that I can send, accept or decline friend requests.
+  - As a user, I can see a list of other users so that I can send, accept or decline follow requests.
   - As a user, I can see my current profile info.
-  - As a user, I can see a specific user's profile given a user ID.
-  - As a user, I can update my profile with Avatar, Company, Job Title, Social Links, and a short description.
+  - As a user, I can see a specific user's profile given a username
+  - As a user, I can update my profile with Avatar, biography.
 - Posts
-  - As a user, I can see a list of posts.
-  - As a user, I can create a new post with text content and an image.
-  - As a user, I can edit my posts.
+  - As a user, I can see a timeline of post
+  - As a user, I can create a new post with a caption and an image.
   - As a user, I can delete my posts.
 - Comments
   - As a user, I can see a list of comments on a post.
@@ -19,7 +17,7 @@
   - As a user, I can update my comments.
   - As a user, I can delete my comments.
 - Reactions
-  - As a user, I can react like or dislike to a post or a comment.
+  - As a user, I can react heart or unheart to a post or a comment.
 - Friends
   - As a user, I can send a friend request to another user who is not my friend.
   - As a user, I can see a list of friend requests I have received.
@@ -114,7 +112,7 @@
   /**
 * @route PUT /users/:id
 * @description Update user profile
-* @body {name, avatar, cover, aboutMe, city, country, company, jobtitle, fbLink, instagramLink, linkedInLink, twitterLink}
+* @body {name, avatar, description, password}
 * @access Login required
   */
   
@@ -123,14 +121,12 @@
   /**
 * @route GET /posts/:id/comments
 * @description Get comments of a post
-* @body
 * @access Login required
   */
   
   /**
 * @route GET /posts/:id
 * @description Get a single post
-* @body
 * @access Login required
   */
 
@@ -144,7 +140,6 @@
   /**
 * @route PUT /posts/user/userId? page=1&limit=10
 * @description Get all posts a user can see with pagination
-* @body
 * @access Login required
   */
 
@@ -158,7 +153,6 @@
   /**
 * @route DELETE /posts/:id
 * @description Delete a post
-* @body
 * @access Login required
   */
 
@@ -167,7 +161,6 @@
   /**
 * @route GET /comments/:id
 * @description Get details of a comment
-* @body
 * @access Login required
   */
 
@@ -181,29 +174,25 @@
   /**
 * @route PUT /comment:id
 * @description Update a comment
-* @body
 * @access Login required
   */
 
   /**
 * @route DELETE comments/:id
 * @description Delete a comment
-* @body
 * @access Login required
   */
 
   /**
 * @route DELETE /comments/:id
 * @description Delete a comment
-* @body
 * @access Login required
   */
 
 - Reaction APIs
   /**
-* @route
-* @description
-* @body
+* @route /users
+* @description Like or unlike post
 * @access Login required
   */
 
